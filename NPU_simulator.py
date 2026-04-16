@@ -240,7 +240,7 @@ def measure_performance():
             
         # 3. 평균 시간 계산 및 출력
         avg_time = total_time / iterations
-        print(f"{n:>2} x {n:>2} 행렬 평균 연산 시간: {avg_time:.8f} 초")
+        print(f"{n:>2} x {n:>2} 행렬 평균 연산 시간: {avg_time:.8f} 초")    #{n:>2} - n값을 넣는데, 전체 칸 너비를 2칸으로 잡고 오른쪽 정렬하라.
 
 if __name__ == "__main__":
     # 기존 모드 1(수동 입력) 코드는 모두 지우거나 주석 처리합니다.
