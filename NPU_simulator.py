@@ -119,23 +119,24 @@ def load_json_data(file_path):
         with open(file_path, 'r', encoding='utf-8') as f:  
             data = json.load(f)
             
-        matrix = data.get('matrix')
+        matrix = data.get('matrix')  #data라는 딕셔너리에서 'matrix'라는 key의 value를 가져와라.
         label = data.get('label')
         
         # [검증] 행렬이 존재하는지, 행이 3개인지, 모든 열이 3개인지 확인
-        if not matrix or len(matrix) != 3 or any(len(row) != 3 for row in matrix):
+        if not matrix or len(matrix) != 3 or any(len(row) != 3 for row in matrix):  
+            #any(len(row) != 3 for row in matrix) - 행들 중 하나라도 길이가 3이 아니라면.
             print(f"FAIL: {file_path} 파일의 행렬 크기가 3x3이 아닙니다.")
-            return None, None # 프로그램 종료 대신 None을 반환하여 안전하게 처리
+            return None, None # 프로그램 종료 대신 None을 반환하여 안전하게 처리. matrix도 없고 label도 없다고 표시.
             
         # 라벨 정규화 적용
         normalized_label = normalize_label(label)
         
-        return matrix, normalized_label
+        return matrix, normalized_label  #ex. ([[1,0,1],[0,1,0],[1,0,1]], "X")로 반환한다는 뜻
         
     except FileNotFoundError:
         print(f"FAIL: {file_path} 파일을 찾을 수 없습니다.")
         return None, None
-    except json.JSONDecodeError:
+    except json.JSONDecodeError:   #파일은 있는데, 안의 내용이 JSON 형식이 아닐 때.
         print(f"FAIL: {file_path} 파일이 올바른 JSON 형식이 아닙니다.")
         return None, None
 
@@ -194,7 +195,8 @@ def run_json_test_mode(folder_path):
             result_text = "FAIL"
 
         # 파일 이름만 깔끔하게 뽑아서 결과 출력
-        file_name = os.path.basename(file_path)
+        file_name = os.path.basename(file_path)   #basename() - 경로에서 마지막 이름만 뽑음.
+        #ex. /c/user/html -- basename(/c/user/html.index) -> html.index를 출력함.
         print(f"[{result_text}] {file_name} | 예측: {prediction} | 정답: {true_label}")
 
     # 5. 최종 정확도 계산 및 출력
