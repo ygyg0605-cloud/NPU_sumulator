@@ -293,3 +293,33 @@ epsilon 정책과 정규화를 통해 안정적인 결과를 얻는다.
         
         # 5단계에서 만든 성능 측정 함수를 호출합니다.
         measure_performance()
+
+
+
+
+<img width="1068" height="1169" alt="Screenshot 2026-04-16 at 8 56 38 PM" src="https://github.com/user-attachments/assets/63f70656-77f0-401d-8b98-48ba44dd13c1" />
+
+<img width="1059" height="1140" alt="Screenshot 2026-04-16 at 8 56 54 PM" src="https://github.com/user-attachments/assets/dc9643cb-1b22-48c9-ab6a-caf8f6af28de" />
+
+<img width="920" height="1154" alt="Screenshot 2026-04-16 at 8 57 09 PM" src="https://github.com/user-attachments/assets/d991cb54-7ebf-4664-9a5b-cc146bd18673" />
+
+<img width="906" height="1157" alt="Screenshot 2026-04-16 at 8 57 26 PM" src="https://github.com/user-attachments/assets/27c73a3a-ad47-4538-87a7-c5c7a51cb8cc" />
+
+<img width="645" height="226" alt="Screenshot 2026-04-16 at 8 57 31 PM" src="https://github.com/user-attachments/assets/16df3ff5-1bad-4975-ab5d-7cc0aec16b0a" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
